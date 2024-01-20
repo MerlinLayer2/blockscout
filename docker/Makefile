@@ -34,7 +34,7 @@ local-start:
 	@echo "==> Starting blockscout db"
 	@docker-compose -f ../docker-compose/services/db.yml up -d
 	@echo "==> Starting blockscout backend"
-	@docker-compose -f ../docker-compose/services/backend-local.yml up -d
+	@docker-compose -f ../docker-compose/services/backend-local.yml up -d --build --force-recreate
 	@echo "==> Starting stats microservice"
 	@docker-compose -f ../docker-compose/services/stats.yml up -d
 	@echo "==> Starting visualizer microservice"
