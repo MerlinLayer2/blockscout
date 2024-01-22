@@ -38,12 +38,6 @@
                     gettext("Blocks"),
                     to: blocks_path(@conn, :index),
                     class: "dropdown-item #{tab_status("blocks", @conn.request_path)}")%>
-              <%= link(gettext("Uncles"),
-                    to: uncle_path(@conn, :uncle),
-                    class: "dropdown-item #{tab_status("uncles", @conn.request_path)}")%>
-              <%= link(gettext("Forked Blocks (Reorgs)"),
-                    to: reorg_path(@conn, :reorg),
-                    class: "border-bottom dropdown-item #{tab_status("reorgs", @conn.request_path)}")%>
               <div class="nav-submenu">
                 <span>
                   <%= gettext("Transactions") %>
